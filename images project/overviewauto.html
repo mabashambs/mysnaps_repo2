@@ -1,0 +1,66 @@
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Trade+Winds&display=swap" rel="stylesheet">
+<style media="screen">
+.mySlides {
+  display:none;
+  margin-left: 60%;
+  margin-right: 20%;
+  border:10px white groove;
+
+}
+  body{
+    text-align: center;
+    font-family: 'Trade Winds';
+    background: black;
+    background-repeat:repeat;
+    background-size: cover;
+  }
+  h1{
+    padding-top: 2%;
+    margin-bottom: 2%;
+    color: white;
+  }
+
+  * {
+  font-family: 'Righteous', cursive;
+  }
+</style>
+  </head>
+  <body>
+    <h1>Images Overview</h1>
+
+    <div class="w3-content w3-section" style="max-width:45%">
+      <img class="mySlides" height="600px" width="900px" src="images/pic12.jpg" style="width:100%">
+      <img class="mySlides" height="600px" width="900px" src="images/pic0.jpg" style="width:100%">
+      <img class="mySlides" height="600px" width="900px" src="images/pic14.jpg" style="width:100%">
+      <img class="mySlides" height="600px" width="900px" src="images/pic10.jpg" style="width:100%">
+      <img class="mySlides" height="600px" width="900px" src="images/pic1.jpg" style="width:100%">
+      <img class="mySlides" height="600px" width="900px" src="images/pic6.jpg" style="width:100%">
+    </div>
+<a href="index.html" style="background:black;" class='btn btn-primary btn-lg'>HOME</a>&nbsp&nbsp
+<a href="gallery.html" style="background:black;" class='btn btn-primary btn-lg'>Gallery</a>
+    <script>
+    var myIndex = 0;
+    carousel();
+
+    function carousel() {
+      var i;
+      var x = document.getElementsByClassName("mySlides");
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+      }
+      myIndex++;
+      if (myIndex > x.length) {myIndex = 1}
+      x[myIndex-1].style.display = "block";
+      setTimeout(carousel, 2000); // Change image every 1 seconds
+    }
+    </script>
+
+  </body>
+</html>
